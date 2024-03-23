@@ -14,9 +14,9 @@
     </Style>
 
     <Style TargetType="Border">
-        <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray500}}" />
-        <Setter Property="StrokeShape" Value="Rectangle"/>
-        <Setter Property="StrokeThickness" Value="1"/>
+        <Setter Property="Stroke" Value="{StaticResource White}" />
+        <Setter Property="StrokeShape" Value="RoundRectangle 10"/>
+        <Setter Property="StrokeThickness" Value="2"/>
     </Style>
 
     <Style TargetType="BoxView">
@@ -24,12 +24,12 @@
     </Style>
 
     <Style TargetType="Button">
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource PrimaryDarkText}}" />
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource PrimaryDark}}" />
+        <Setter Property="TextColor" Value="{StaticResource White}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource OffBlack}" />
         <Setter Property="FontFamily" Value="OpenSansRegular"/>
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="BorderWidth" Value="0"/>
-        <Setter Property="CornerRadius" Value="8"/>
+        <Setter Property="CornerRadius" Value="10"/>
         <Setter Property="Padding" Value="14,10"/>
         <Setter Property="MinimumHeightRequest" Value="44"/>
         <Setter Property="MinimumWidthRequest" Value="44"/>
@@ -186,6 +186,14 @@
     <Style TargetType="Label" x:Key="Headline">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource MidnightBlue}, Dark={StaticResource White}}" />
         <Setter Property="FontSize" Value="32" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style TargetType="Label" x:Key="Title">
+        <Setter Property="TextColor" Value="{StaticResource White}" />
+        <Setter Property="FontSize" Value="36" />
+        <Setter Property="FontAttributes" Value="Bold"/>
         <Setter Property="HorizontalOptions" Value="Center" />
         <Setter Property="HorizontalTextAlignment" Value="Center" />
     </Style>
@@ -424,18 +432,14 @@
     </Style>
     
     <ControlTemplate x:Key="RadioButtonTemplate">
-            <Border Stroke="#F3F2F1"
-                    StrokeThickness="2"
-                    StrokeShape="RoundRectangle 10"
-                    BackgroundColor="#F3F2F1"
-                    VerticalOptions="Fill">
+            <Border>
                 <VisualStateManager.VisualStateGroups>
                     <VisualStateGroupList>
                         <VisualStateGroup x:Name="CheckedStates">
                             <VisualState x:Name="Checked">
                                 <VisualState.Setters>
-                                    <Setter Property="Stroke"
-                                            Value="#FF3300" />
+                                    <Setter Property="BackgroundColor"
+                                            Value="{StaticResource OffBlack}" />
                                     <Setter TargetName="check"
                                             Property="Opacity"
                                             Value="1" />
@@ -444,9 +448,7 @@
                             <VisualState x:Name="Unchecked">
                                 <VisualState.Setters>
                                     <Setter Property="BackgroundColor"
-                                            Value="#000000" />
-                                    <Setter Property="Stroke"
-                                            Value="#FFFFFF" />
+                                            Value="Black" />
                                     <Setter TargetName="check"
                                             Property="Opacity"
                                             Value="0" />
