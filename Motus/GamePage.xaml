@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Motus"
+             x:Class="Motus.GamePage"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <Grid
+            RowDefinitions="*, 250">
+            <VerticalStackLayout
+                Spacing="1"
+                VerticalOptions="Center"
+                HorizontalOptions="Center">
+                <Label x:Name="nbLettre"
+                       TextColor="White"/>
+                <Grid x:Name="MotusGrid"
+                      RowDefinitions="40,40,40,40,40,40"
+                      RowSpacing="0"
+                      ColumnSpacing="0"
+                      Margin="0"
+                      Padding="0">
+                </Grid>
+            </VerticalStackLayout>
+            <VerticalStackLayout Grid.Row="1"
+                                 VerticalOptions="End">
+                <Grid ColumnDefinitions="*,*,*,*,*,*,*,*,*,*"
+                      RowDefinitions="*,*,*"
+                      Margin="10"
+                      ColumnSpacing="2"
+                      RowSpacing="3">
+                    
+                    <!-- First row -->
+                    <Border Grid.Column="0" Grid.Row="0" >
+                        <Button Text="A" Clicked="OnButtonClicked" />
+                    </Border>
+                    <Border Grid.Column="1" Grid.Row="0">
+                        <Button Text="Z" Clicked="OnButtonClicked" />
+                    </Border>
+                    <Border Grid.Column="2" Grid.Row="0">
+                        <Button Text="E" Clicked="OnButtonClicked" />
+                    </Border>
+                    <Border Grid.Column="3" Grid.Row="0">
+                        <Button Text="R" Clicked="OnButtonClicked" />
+                    </Border>
+                    <Border Grid.Column="4" Grid.Row="0">
+                        <Button Text="T" Clicked="OnButtonClicked" />
+                    </Border>
+                    <Border Grid.Column="5" Grid.Row="0">
+                        <Button Text="Y" Clicked="OnButtonClicked" />
+                    </Border>
+                    <Border Grid.Column="6" Grid.Row="0">
+                        <Button Text="U" Clicked="OnButtonClicked" />
+                    </Border>
+                    <Border Grid.Column="7" Grid.Row="0">
+                        <Button Text="I" Clicked="OnButtonClicked" />
+                    </Border>
+                    <Border Grid.Column="8" Grid.Row="0">
+                        <Button Text="O" Clicked="OnButtonClicked" />
+                    </Border>
+                    <Border Grid.Column="9" Grid.Row="0">
+                        <Button Text="P" Clicked="OnButtonClicked" />
+                    </Border>
+                        
+                    <!-- First row -->
+                    <Border Grid.Column="0" Grid.Row="1">
+                        <Button Text="Q" Clicked="OnButtonClicked"/>
+                    </Border>
+                    <Border Grid.Column="1" Grid.Row="1">
+                        <Button Text="S" Clicked="OnButtonClicked"/>
+                    </Border>
+                    <Border Grid.Column="2" Grid.Row="1">
+                        <Button Text="D" Clicked="OnButtonClicked"/>
+                    </Border>
+                    <Border Grid.Column="3" Grid.Row="1">
+                        <Button Text="F" Clicked="OnButtonClicked"/>
+                    </Border>
+                    <Border Grid.Column="4" Grid.Row="1">
+                        <Button Text="G" Clicked="OnButtonClicked"/>
+                    </Border>
+                    <Border Grid.Column="5" Grid.Row="1">
+                        <Button Text="H" Clicked="OnButtonClicked"/>
+                    </Border>
+                    <Border Grid.Column="6" Grid.Row="1">
+                        <Button Text="J" Clicked="OnButtonClicked"/>
+                    </Border>
+                    <Border Grid.Column="7" Grid.Row="1">
+                        <Button Text="K" Clicked="OnButtonClicked"/>
+                    </Border>
+                    <Border Grid.Column="8" Grid.Row="1">
+                        <Button Text="L" Clicked="OnButtonClicked"/>
+                    </Border>
+                    <Border Grid.Column="9" Grid.Row="1">
+                        <Button Text="M" Clicked="OnButtonClicked"/>
+                    </Border>
+                        
+                    <!-- First row -->
+                    <Border Grid.Column="0" Grid.Row="2">
+                        <Button Text="W" Clicked="OnButtonClicked"/>
+                    </Border>
+                    <Border Grid.Column="1" Grid.Row="2">
+                        <Button Text="X" Clicked="OnButtonClicked"/>
+                    </Border>
+                    <Border Grid.Column="2" Grid.Row="2">
+                        <Button Text="C" Clicked="OnButtonClicked"/>
+                    </Border>
+                    <Border Grid.Column="3" Grid.Row="2">
+                        <Button Text="V" Clicked="OnButtonClicked"/>
+                    </Border>
+                    <Border Grid.Column="4" Grid.Row="2">
+                        <Button Text="B" Clicked="OnButtonClicked"/>
+                    </Border>
+                    <Border Grid.Column="5" Grid.Row="2">
+                        <Button Text="N" Clicked="OnButtonClicked"/>
+                    </Border>
+                    <Border Grid.Column="6" Grid.Row="2">
+                        <ImageButton x:Name = "back"
+                                     Source="Images/backspace_white_24dp.svg" 
+                                     HeightRequest="15" 
+                                     WidthRequest="15"
+                                     Clicked="OnButtonClicked"/>
+                    </Border>
+                    <Border Grid.Column="7" Grid.Row="2" Grid.ColumnSpan="2">
+                        <ImageButton x:Name = "vaidate"
+                                     Source="Images/keyboard_return_white_18dp.svg" 
+                                     HeightRequest="25" 
+                                     WidthRequest="25"
+                                     Clicked="OnButtonClicked"/>
+                    </Border>
+                </Grid>
+            </VerticalStackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
